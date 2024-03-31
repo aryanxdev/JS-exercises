@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App</title>
+  </head>
+  <body>
+    <button
+      class="start"
+      onclick="
+      let textInButton=document.querySelector('.start').innerHTML;
+      document.querySelector('.start').innerHTML='loading....';
+      setTimeout(() => {
+        if(textInButton!=='Finish'){
+          document.querySelector('.start').innerHTML='Finish';
+        }
+        else{
+          document.querySelector('.start').innerHTML='Start';
+        }
+      }, 1000);"
+    >
+      Start
+    </button>
+
+    <button
+      class="cart"
+      onclick="
+    document.querySelector('.added').innerHTML='Added';
+    clearTimeout(timeoutID); //to refresh the time out if the button is clicked again but before 2 seconds. if button added message k hatne se pehle vaapis dabai gyi to purana vala set timeout clear ho jayega and new banega
+    timeoutID=setTimeout(() => {
+        document.querySelector('.added').innerHTML='';
+    }, 2000);
+    "
+    >
+      Add to Cart
+    </button>
+    <p class="added"></p>
+    <p>
+      <button onclick="messages++">add</button
+      ><button onclick="messages--">remove</button>
+    </p>
+
+    <script>
+      let inid;
+      let messages = 2;
+      let timeoutID;
+      let runTwice = (runner) => {
+        for (i = 1; i <= 2; i++) {
+          runner();
+        }
+      };
+
+      runTwice(b= ()=> {
+        console.log(2 + 2);
+        console.log(2 + 1);
+      });
+      // document.title = "App";
+      inid = setInterval(() => {
+        if (messages > 0) {
+          if (document.title === "App") {
+            document.title = `${messages} new messages`;
+          } else {
+            document.title = "App";
+          }
+        } else {
+          // clearInterval(inid); //ye krne se interval clear ho jayega and if i ever make the number of messages greater than 0, title will not be updated cause interval to clear ho chuka hai na
+          document.title = "App";
+        }
+      }, 1000);
+      //   setInterval(() => {
+      //     document.title="App";
+      //   }, 2000);
+
+      let arr = [1, 2, 3, 4, 5];
+      let arr2 = arr.map((value, index) => {
+        // return arr[index] *2;
+        return value * 2;
+      });
+      console.log(arr2);
+    </script>
+  </body>
+</html>

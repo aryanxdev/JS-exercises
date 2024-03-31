@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Practice Projects</title>
+    <link rel="stylesheet" href="DOM_projects.css" />
+  </head>
+  <body>
+    <!-- yt subscribe button -->
+    <p>YouTube Subscribe Button</p>
+
+    <button
+      class="subscribe"
+      onclick="
+        subscribe_button();
+      "
+    >
+      Subscribe
+    </button>
+    <!--if we add spaces around the Subscribe text, it will show in the innerHTML so to tackle this we use the innerText property instead of the innerHTML property-->
+
+    <!-- amazon shipping calculator -->
+    <p style="padding-top: 30px">Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10 shipping.</p>
+
+    <p>Orders above $40 = FREE shipping.</p>
+
+    <input
+      type="text"
+      class="costInput"
+      placeholder="Cost of Order"
+      onkeydown="
+        keydownAction(event);
+      "
+    />
+    <!-- any input made in the input box on web is a string and if the input has to be a number you need to parse it to a number -->
+
+    <button
+      class="calculateButton"
+      onclick="
+        costCalc();
+      "
+    >
+      Calculate
+    </button>
+
+    <p class="calculatedCost"></p>
+
+    <!-- onkeyup -->
+    <input
+      type="text"
+      class="onkeyUP"
+      placeholder="Type Here ....."
+      onkeyup="
+     keyPress(event);
+     "
+    />
+    <p class="onkeyUPaction"></p>
+
+    <p class="recentKeyPress"></p>
+
+    <p>
+      <button
+        class="gaming"
+        onclick="
+        press='Gaming';g++;
+        oneButton();
+            "
+      >
+        Gaming
+      </button>
+      <button
+        class="music"
+        onclick="
+        press='Music';m++;
+        oneButton();
+            "
+      >
+        Music
+      </button>
+      <button
+        class="tech"
+        onclick="
+        press='Tech';t++;
+        oneButton();
+            "
+      >
+        Tech
+      </button>
+    </p>
+
+    <script src="DOM_projects.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+
+    <style>
+        .amountContainer{
+            background-color: rgb(231, 229, 229);
+            width: 200px;
+            padding-left: 8px;
+            display: inline-block;
+        }
+        .amountInputBox{
+            background-color: rgb(231, 229, 229);
+            width: 180px;
+            border: none;
+            outline: none;
+        }
+        .buttons{
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="amountContainer">
+        <span>$</span>
+        <input type="number" class="amountInputBox" placeholder="0.00">
+    </div>
+
+    <div class="buttons">
+        <button class="deposit">+deposit</button>
+        <button class="withdraw">-withdraw</button>
+    </div>
+    <p>Balance:<span class="balance"></span></p>
+
+
+    <script>
+        let balance=0;let withdrawal=0;
+        document.querySelector('.deposit').addEventListener('click',()=>{
+            if(document.querySelector('.amountInputBox').value>0)
+            {
+                balance+=Number(document.querySelector('.amountInputBox').value);
+            }
+            document.querySelector('.balance').innerHTML=balance;
+            document.querySelector('.amountInputBox').value='';
+        });
+
+        document.querySelector('.withdraw').addEventListener('click',()=>{
+            if(Number(document.querySelector('.amountInputBox').value)<balance || Number(document.querySelector('.amountInputBox').value)===balance)
+            {
+                withdrawal=Number(document.querySelector('.amountInputBox').value);
+                balance=balance-withdrawal;
+            }
+            document.querySelector('.balance').innerHTML=balance;
+            document.querySelector('.amountInputBox').value='';
+        });
+    </script>
+
+
+</body>
+</html>

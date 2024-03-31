@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+    <script>
+      console.log(dayjs());
+      let checkDay = (day) => {
+        let daystoadd = day - dayjs().$D;
+        console.log(daystoadd);
+        let newday = dayjs().add(daystoadd, "day");
+        console.log(newday.$W);
+        if (newday.$W === 0 || newday.$W === 6) {
+          console.log("finally a weekend");
+        } else {
+          console.log("still not a weekend");
+        }
+      };
+      checkDay(10);
+    </script>
+  </body>
+</html>

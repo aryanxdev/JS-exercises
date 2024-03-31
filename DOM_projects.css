@@ -1,0 +1,98 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* subscribe */
+.subscribe {
+  color: white;
+  background-color: none;
+  background-color: black;
+  width: 100px;
+  padding: 10px 15px 10px 15px;
+  font-weight: 700;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  /* transition: all 0.2s; */
+}
+
+.isSubscribed {
+  background-color: rgb(205, 205, 205);
+  color: black;
+}
+
+/* amazon shipping calculator */
+.costInput {
+  width: 200px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.calculateButton {
+  padding: 6px;
+  width: 80px;
+  color: white;
+  background-color: none;
+  background-color: rgb(113, 187, 1);
+  border: none;
+  border: 1px solid black;
+  font-weight: 700;
+  margin-left: -5px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.calculateButton:hover {
+  background-color: rgb(70, 115, 2);
+}
+
+.calculateButton:active {
+  background-color: rgb(107, 132, 71);
+}
+
+.onkeyUP {
+  margin-top: 20px;
+  width: 200px;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.gaming {
+  margin-top: 30px;
+  background-color: aqua;
+  height: 35px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.music {
+  background-color: aqua;
+  height: 35px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.tech {
+  background-color: aqua;
+  height: 35px;
+  width: 120px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.coloronclick {
+  background-color: black;
+  color: white;
+}
